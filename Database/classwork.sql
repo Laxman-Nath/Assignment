@@ -158,7 +158,7 @@ VALUES
 --      3.4 Get all authors with comma seperated list of books they have written
 
 --3.1>.
-Select Title,PublishedDate from Book WHERE PublishedDate >= date('now','-30 years');
+Select Title Books from Book WHERE PublishedDate >= date('now','-30 years');
 
 --3.2>.
 SELECT SUM(b.Price) TotalPrice from Book b JOIN Authors a ON
@@ -169,4 +169,4 @@ SELECT p.Name, COUNT(b.ID) PublishedBooks FROM Publisher p JOIN Book b ON p.Id=b
 
 -- 3.4>.
 SELECT a.Name Author,GROUP_CONCAT(b.Title,',') Books FROM Authors a JOIN Book b ON 
-a.Id=b.PublisherId GROUP BY a.Name;
+a.Id=b.AuthorId GROUP BY a.Name;
