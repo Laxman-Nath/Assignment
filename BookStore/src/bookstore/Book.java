@@ -13,7 +13,7 @@ public class Book {
 		long ISBN;
 		String[] titleArray = new String[10];
 		String[] authorArray = new String[10];
-		double[] priceArray = new double[2];
+		double[] priceArray = new double[10];
 		String[] publisherArray = new String[10];
 		long[] ISBNArray = new long[10];
 		int bookCount = 0;
@@ -23,7 +23,7 @@ public class Book {
 		double average = 0.0;
 
 		Scanner sc = new Scanner(System.in);
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 10; i++) {
 
 			System.out.println("Enter title of your book");
 			title = sc.nextLine();
@@ -47,7 +47,7 @@ public class Book {
 
 		System.out.println("Title      Author      Price      Publisher       ISBN");
 		System.out.println("====       ========    ======     =======         =====");
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 10; i++) {
 			System.out.printf("%-7s   %-10s   £%-7.2f   %-10s  %013d%n", titleArray[i], authorArray[i], priceArray[i],
 					publisherArray[i], ISBNArray[i]);
 		}
