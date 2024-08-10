@@ -165,7 +165,7 @@ SELECT SUM(b.Price) TotalPrice from Book b JOIN Authors a ON
 a.Id=b.AuthorId and a.Name='Parijat';
 
 --3.3>.
-SELECT p.Name, COUNT(b.ID) PublishedBooks FROM Publisher p JOIN Book b ON p.Id=b.PublisherId GROUP BY p.Name ORDER BY PublishedBooks DESC;
+SELECT p.Name, COUNT(b.ID) PublishedBooks FROM Publisher p LEFT JOIN Book b ON p.Id=b.PublisherId GROUP BY p.Name ORDER BY PublishedBooks DESC;
 
 -- 3.4>.
 SELECT a.Name Author,GROUP_CONCAT(b.Title,',') Books FROM Authors a JOIN Book b ON 
