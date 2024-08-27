@@ -22,18 +22,18 @@ public class Book {
 
 			System.out.println("Enter title of your book");
 			titleArray[i] = sc.nextLine();
-			
+
 			System.out.println("Enter price of your book");
 			priceArray[i] = sc.nextDouble();
 			sc.nextLine();
 			System.out.println("Enter author of your book");
 			authorArray[i] = sc.nextLine();
-			
+
 			System.out.println("Enter publisher of your book");
 			publisherArray[i] = sc.nextLine();
 			System.out.println("Enter ISBN of your book");
 			ISBNArray[i] = sc.nextLong();
-			
+
 			bookCount++;
 			sc.nextLine();
 		}

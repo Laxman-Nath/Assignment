@@ -1,4 +1,4 @@
-package Inheritance;
+package Inheritance.FirstQuestion;
 
 public class Child extends Parent{
 public void display() {
